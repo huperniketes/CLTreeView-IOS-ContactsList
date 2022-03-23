@@ -43,6 +43,7 @@
 		3435937419BE9E89006762FC /* head7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3435936F19BE9E89006762FC /* head7.jpg */; };
 		3435937519BE9E89006762FC /* head8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3435937019BE9E89006762FC /* head8.jpg */; };
 		3435937719BE9ED5006762FC /* head3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3435937619BE9ED5006762FC /* head3.jpg */; };
+		9DBC409227EA99B2005DFC19 /* CLTreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC408F27EA9366005DFC19 /* CLTreeViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		3435936F19BE9E89006762FC /* head7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head7.jpg; sourceTree = "<group>"; };
 		3435937019BE9E89006762FC /* head8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head8.jpg; sourceTree = "<group>"; };
 		3435937619BE9ED5006762FC /* head3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head3.jpg; sourceTree = "<group>"; };
+		9DBC408E27EA9366005DFC19 /* CLTreeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewCell.h; sourceTree = "<group>"; };
+		9DBC408F27EA9366005DFC19 /* CLTreeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +216,8 @@
 			children = (
 				3435936619BE95C3006762FC /* CLTree.h */,
 				3435932719BE9390006762FC /* Level0_Cell.xib */,
+				9DBC408E27EA9366005DFC19 /* CLTreeViewCell.h */,
+				9DBC408F27EA9366005DFC19 /* CLTreeViewCell.m */,
 				3435930F19BE9390006762FC /* CLTreeView_LEVEL0_Cell.h */,
 				3435931019BE9390006762FC /* CLTreeView_LEVEL0_Cell.m */,
 				3435931119BE9390006762FC /* CLTreeView_LEVEL0_Model.h */,
@@ -369,6 +374,7 @@
 				343592E419BE92A9006762FC /* main.m in Sources */,
 				3435933019BE9390006762FC /* CLTreeView_LEVEL2_Model.m in Sources */,
 				343592EE19BE92A9006762FC /* ThreeViewController.m in Sources */,
+				9DBC409227EA99B2005DFC19 /* CLTreeViewCell.m in Sources */,
 				343592E819BE92A9006762FC /* CLTreeViewDemoAppDelegate.m in Sources */,
 				3435933319BE9390006762FC /* CLTreeViewNode.m in Sources */,
 				3435932F19BE9390006762FC /* CLTreeView_LEVEL2_Cell.m in Sources */,

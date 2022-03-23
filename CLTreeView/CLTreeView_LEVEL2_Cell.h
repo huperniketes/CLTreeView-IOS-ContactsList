@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CLTreeViewNode.h"
+#import "CLTreeViewCell.h"
 
-@interface CLTreeView_LEVEL2_Cell : UITableViewCell
+@interface CLTreeView_LEVEL2_Cell : CLTreeViewCell
 
-@property (retain,strong,nonatomic) CLTreeViewNode *node;//data
 @property (strong,nonatomic) IBOutlet UIImageView *headImg;
 @property (strong,nonatomic) IBOutlet UILabel *signture;//个性签名
-@property (strong,nonatomic) IBOutlet UILabel *name;
 
 @end
