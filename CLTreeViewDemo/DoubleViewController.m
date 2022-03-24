@@ -145,41 +145,26 @@
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *indentifier = @"level0cell";
-    static NSString *indentifier1 = @"level1cell";
-    static NSString *indentifier2 = @"level2cell";
+	static NSString *indentifiers[] = {
+		@"level0cell",
+		@"level1cell",
+		@"level2cell"
+	};
+	static NSString *nibNames[] = {
+		@"Level0_Cell",
+		@"Level1_Cell",
+		@"Level2_Cell"
+	};
     CLTreeViewNode *node = [_displayArray objectAtIndex:indexPath.row];
-    
-    if(node.type == 0){//类型为0的cell
-        CLTreeView_LEVEL0_Cell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
-        if(cell == nil){
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"Level0_Cell" owner:self options:nil] lastObject];
-        }
-        cell.node = node;
-        [self loadDataForTreeViewCell:cell with:node];//重新给cell装载数据
-        [cell setNeedsDisplay]; //重新描绘cell
-        return cell;
-    }
-    else if(node.type == 1){//类型为1的cell
-        CLTreeView_LEVEL1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier1];
-        if(cell == nil){
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"Level1_Cell" owner:self options:nil] lastObject];
-        }
-        cell.node = node;
-        [self loadDataForTreeViewCell:cell with:node];
-        [cell setNeedsDisplay];
-        return cell;
-    }
-    else{//类型为2的cell
-        CLTreeView_LEVEL2_Cell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier2];
-        if(cell == nil){
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"Level2_Cell" owner:self options:nil] lastObject];
-        }
-        cell.node = node;
-        [self loadDataForTreeViewCell:cell with:node];
-        [cell setNeedsDisplay];
-        return cell;
-    }
+
+	CLTreeView_LEVEL0_Cell *cell = [tableView dequeueReusableCellWithIdentifier: indentifiers[node.type]];
+	if(cell == nil){
+		cell = [[[NSBundle mainBundle] loadNibNamed: nibNames[node.type] owner:self options:nil] lastObject];
+	}
+	cell.node = node;
+	[self loadDataForTreeViewCell:cell with:node];
+	[cell setNeedsDisplay];
+	return cell;
 }
 
 /*---------------------------------------
